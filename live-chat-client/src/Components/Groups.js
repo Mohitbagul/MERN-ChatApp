@@ -37,7 +37,7 @@ function Groups() {
     };
 
     axios
-      .get("http://localhost:8080/chat/fetchGroups", config)
+      .get("mern-chat-app-api-nine.vercel.app/chat/fetchGroups", config)
       .then((response) => {
         console.log("Group Data from API ", response.data);
         SetGroups(response.data);
@@ -97,7 +97,7 @@ function Groups() {
                       Authorization: `Bearer ${userData.data.token}`,
                     },
                   };
-                  axios.put("http://localhost:8080/chat/addSelfToGroup", {
+                  axios.put("mern-chat-app-api-nine.vercel.app/chat/addSelfToGroup", {
                     chatId: group._id,
                     userId: userData.data._id,
                   }, config);
