@@ -30,7 +30,7 @@ function Login() {
       };
 
       const response = await axios.post(
-        "http://localhost:8080/user/login/",
+        "mern-chat-app-api-nine.vercel.app/user/login/",
         data,
         config
       );
@@ -58,7 +58,7 @@ function Login() {
       };
   
       const response = await axios.post(
-        "http://localhost:8080/user/register/",
+        "mern-chat-app-api-nine.vercel.app/user/register/",
         data,
         config
       );
