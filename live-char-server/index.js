@@ -7,7 +7,13 @@ const { notFound, errorHandler } = require("./middleware/errorMiddleware");
 dotenv.config();
 
 const app = express();
-app.use(cors({ origin: "*" }));
+app.use(cors(
+{
+  origin : ["https://deploy-mern-1whq.vercel.app"],
+  methods : ["POST" , "GET" , "PUT"],
+  credentials : true
+}
+));
 app.use(express.json());
 
 const userRoutes = require("./Routes/userRoutes");
