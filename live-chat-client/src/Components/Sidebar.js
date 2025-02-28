@@ -38,7 +38,7 @@ const Sidebar = () => {
           },
         };
         console.log("Fetching conversations...");
-        const response = await axios.get("http://localhost:8080/chat/", config);
+        const response = await axios.get("mern-chat-app-api-nine.vercel.app/chat/", config);
         console.log("fetched data:",response.data);
         
         setConversations(response.data);
